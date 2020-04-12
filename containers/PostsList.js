@@ -20,7 +20,7 @@ export default function ({navigation}) {
             onPress={pressHandler}
             style={styles.btn}
             >
-            <Text>get Posts</Text>
+            <Text style={{fontSize:20,color:"white",fontFamily:"Trocchi,serif", fontWeight:400}}>GET POSTS</Text>
             </TouchableOpacity>
 
         }
@@ -37,7 +37,7 @@ export default function ({navigation}) {
                 <Text 
                     style={styles.txtStyle}
                     onPress={()=>navigation.navigate('PostDetails',{postId: post.item.id})}
-                >{post.item.title}</Text>
+                ><strong>Post Title: </strong>{post.item.title}</Text>
             </View>
             )
             }
@@ -57,8 +57,12 @@ const styles = StyleSheet.create({
     btn: {
         margin:10,
         padding:10,
-        backgroundColor:"violet",
-        borderRadius:15
+        backgroundColor:"#6b558e",
+        color:"white",
+        borderRadius:18,
+        width:150,
+        textAlign:"center",
+        size:50
       },
       imgStyle: {
         margin:9,

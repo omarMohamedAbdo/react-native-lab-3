@@ -17,9 +17,9 @@ export default function ({navigation , route}) {
             style={styles.imgStyle}
             source={{uri: 'https://source.unsplash.com/random'}}
         />
-        <Text style={{textDecorationLine:"underline",fontWeight:"normal",fontSize:30,alignSelf:"flex-start",color: "#7c795d",fontFamily:"Trocchi,serif",lineHeight:38}}>Title:</Text>
+        <Text style={{marginHorizontal:10,textDecorationLine:"underline",fontWeight:"normal",fontSize:30,alignSelf:"flex-start",color: "#7c795d",fontFamily:"Trocchi,serif",lineHeight:38}}>Title:</Text>
         <Text style={styles.txtStyle}>{post.title}</Text>
-        <Text style={{textDecorationLine:"underline",fontWeight:"normal",fontSize:30,alignSelf:"flex-start",color: "#7c795d",fontFamily:"Trocchi,serif",lineHeight:38}}>Body:</Text>
+        <Text style={{marginHorizontal:10,textDecorationLine:"underline",fontWeight:"normal",fontSize:30,alignSelf:"flex-start",color: "#7c795d",fontFamily:"Trocchi,serif",lineHeight:38}}>Body:</Text>
         <Text style={styles.txtStyle}>{post.body}</Text>
     </View> )
 }

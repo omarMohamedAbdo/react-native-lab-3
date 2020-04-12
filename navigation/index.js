@@ -14,14 +14,16 @@ const {Navigator: TabNavigator , Screen: TabScreen} = createBottomTabNavigator()
 
 const StackNav = () => (
 <StackNavigator screenOptions={{
-    headerStyle:{backgroundColor:"violet"},
+    headerStyle:{backgroundColor:"#6b558e"},
 }}>
     <StackScreen name="PostsList" component={PostsList} options={{
+       title:"Posts List",
        headerTitleAlign:"center" ,
        headerTintColor:"white",
        headerTitleStyle:{fontSize:30,fontWeight:"bold"}
     }}/>
     <StackScreen name="PostDetails" component={PostDetails} options={{
+       title:"Details",
        headerTitleAlign:"center",
        headerTintColor:"white",
        headerTitleStyle:{fontSize:30,fontWeight:"bold"} 
@@ -34,13 +36,24 @@ export default function () {
     <NavigationContainer>
         <TabNavigator 
            tabBarOptions={{
-               style:{backgroundColor:"violet",
+               style:{backgroundColor:"#6b558e",
+               height: 60,
+               paddingVertical: 5,
                
             },
-            tabStyle: { color:"white"}
+            labelStyle: {        
+                fontSize: 12,
+                fontWeight:"solid",        
+                lineHeight: 20,        
+                fontFamily: "CircularStd-Book"      
+            },
+            activeTintColor:"white",
+            animationEnabled: true,
+            swipeEnabled: true
         }} 
         >
             <TabScreen name="Posts" component={StackNav} options={{
+                style:{fontSize:50},
                 tabBarLabel: 'Posts',
                 tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons name="comment" color={color} size={size} />
